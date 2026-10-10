@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 18% 97%;
+    --foreground: 215 14% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 14% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 14% 17%;
+    --primary: 153 77% 37%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 146 50% 94%;
+    --secondary-foreground: 159 59% 11%;
+    --muted: 120 15% 95%;
+    --muted-foreground: 221 13% 46%;
+    --accent: 146 50% 94%;
+    --accent-foreground: 159 59% 11%;
+    --destructive: 4 74% 49%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 22 92% 37%;
+    --warning-foreground: 0 0% 100%;
+    --border: 130 13% 91%;
+    --input: 130 13% 91%;
+    --ring: 153 77% 37%;
+    --deep-green: 159 59% 11%;
+    --soft-green: 146 50% 94%;
+    --chart-1: 153 77% 37%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 22 92% 37%;
+    --chart-5: 4 74% 49%;
+    --radius: 0.875rem;
+    --font-heading: 'Inter', 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Inter', 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 14% 17%;
+    --sidebar-primary: 153 77% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 146 50% 94%;
+    --sidebar-accent-foreground: 159 59% 11%;
+    --sidebar-border: 130 13% 91%;
+    --sidebar-ring: 153 77% 37%;
+  }
+
+  .dark {
+    --background: 159 30% 8%;
+    --foreground: 120 15% 92%;
+    --card: 159 25% 11%;
+    --card-foreground: 120 15% 92%;
+    --popover: 159 25% 11%;
+    --popover-foreground: 120 15% 92%;
+    --primary: 153 60% 45%;
+    --primary-foreground: 159 30% 8%;
+    --secondary: 159 20% 16%;
+    --secondary-foreground: 120 15% 92%;
+    --muted: 159 20% 16%;
+    --muted-foreground: 120 10% 65%;
+    --accent: 159 20% 18%;
+    --accent-foreground: 120 15% 92%;
+    --destructive: 4 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 22 80% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 159 15% 20%;
+    --input: 159 15% 20%;
+    --ring: 153 60% 45%;
+    --deep-green: 146 50% 94%;
+    --soft-green: 159 25% 14%;
+    --chart-1: 153 60% 45%;
+    --chart-2: 173 48% 50%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 22 80% 55%;
+    --chart-5: 4 70% 55%;
+    --sidebar-background: 159 30% 8%;
+    --sidebar-foreground: 120 15% 92%;
+    --sidebar-primary: 153 60% 45%;
+    --sidebar-primary-foreground: 159 30% 8%;
+    --sidebar-accent: 159 20% 16%;
+    --sidebar-accent-foreground: 120 15% 92%;
+    --sidebar-border: 159 15% 20%;
+    --sidebar-ring: 153 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

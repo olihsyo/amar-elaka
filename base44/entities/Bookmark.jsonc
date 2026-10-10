@@ -1,0 +1,39 @@
+{
+  "name": "Bookmark",
+  "type": "object",
+  "properties": {
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "news",
+        "business",
+        "job",
+        "notice"
+      ]
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "item_title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "item_type",
+    "item_id"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

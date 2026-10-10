@@ -1,0 +1,51 @@
+{
+  "name": "Locality",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "upazila": {
+      "type": "string"
+    },
+    "union": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "district",
+        "upazila",
+        "union",
+        "ward"
+      ],
+      "default": "upazila"
+    }
+  },
+  "required": [
+    "name",
+    "district",
+    "upazila"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
